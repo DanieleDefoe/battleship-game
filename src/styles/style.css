@@ -10,6 +10,7 @@
 
 :root {
   font-size: 62.5%;
+  --header-height: clamp(150px, 20vh, 500px);
 }
 
 .page {
@@ -22,7 +23,7 @@
 
 .header {
   font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
-  height: clamp(150px, 20vh, 500px);
+  height: var(--header-height);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +32,65 @@
 
 .header__title {
   text-transform: uppercase;
-  font-size: 7rem;
+  font-size: 10rem;
   text-align: center;
+}
+
+.main {
+  width: 100%;
+  height: calc(100vh - var(--header-height) - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.playground-grid {
+  width: 500px;
+  height: 500px;
+  box-sizing: unset;
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.playground__block {
+  width: 50px;
+  height: 50px;
+  border-top: 2px solid rgba(0, 0, 0, 0.8);
+  border-left: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.playground__block:nth-of-type(10n) {
+  border-right: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: -20px 0 20px 0 rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
+  gap: 2rem;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in;
+}
+
+.footer__icon {
+  object-fit: contain;
+  width: 4rem;
+}
+
+@media (hover: hover) {
+  .footer__link:hover {
+    opacity: 0.7;
+  }
 }
