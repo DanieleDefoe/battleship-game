@@ -2,6 +2,10 @@
 const blankArea = (event, shipLength, isHorizontal) => {
   const pos = event.target.id
   const position = parseInt(pos, 10)
+
+  if ((position + shipLength) % 10 < shipLength && isHorizontal) return
+  if ((position + shipLength * 10) % 100 < shipLength * 10) return
+
   for (
     let i = position, j = 0;
     i <= position + shipLength, j <= shipLength;

@@ -1,6 +1,6 @@
 const createGridRotate = (() => {
   const gridRotateBtn = document.createElement('button')
-  gridRotateBtn.className = 'grid__rotate'
+  gridRotateBtn.className = 'popup__rotate'
   gridRotateBtn.textContent = 'Rotate'
 
   window.isHorizontal = true

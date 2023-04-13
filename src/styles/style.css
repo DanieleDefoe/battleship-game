@@ -43,7 +43,6 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  position: relative;
 }
 
 .playground-grid {
@@ -90,18 +89,50 @@
   width: 4rem;
 }
 
-.grid__rotate {
+.popup {
   position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__container {
+  width: 560px;
+  height: 90%;
+  background: floralwhite;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup__title {
+  font-size: 3.5rem;
+}
+
+.popup__action {
   font-size: 3rem;
-  padding: 1rem 2rem;
+}
+
+.popup__ship-name {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.popup__rotate {
+  font-size: 3.5rem;
+  padding: 1.5rem 2.5rem;
   border-radius: 1rem;
   border: none;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  top: 50%;
-  left: 200px;
-  transform: translateY(-50%);
-  transition: all 0.3s ease-in;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  transition: opacity 0.2s ease-in;
   cursor: pointer;
 }
 
@@ -110,12 +141,9 @@
 }
 
 @media (hover: hover) {
-  .footer__link:hover {
+  .footer__link:hover,
+  .popup__rotate:hover {
     opacity: 0.7;
-  }
-
-  .grid__rotate:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
   }
 
   .playground__block:hover {
