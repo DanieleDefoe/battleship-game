@@ -43,6 +43,7 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  position: relative;
 }
 
 .playground-grid {
@@ -89,8 +90,35 @@
   width: 4rem;
 }
 
+.grid__rotate {
+  position: absolute;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.green-hover {
+  background: lightgreen;
+}
+
 @media (hover: hover) {
   .footer__link:hover {
     opacity: 0.7;
+  }
+
+  .grid__rotate:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  }
+
+  .playground__block:hover {
+    cursor: pointer;
   }
 }
