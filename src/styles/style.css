@@ -99,6 +99,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .popup__container {
@@ -138,6 +144,14 @@
 
 .green-hover {
   background: lightgreen;
+}
+
+.black-ship {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.enemy-hidden-ship {
+  background: transparent;
 }
 
 @media (hover: hover) {
