@@ -3,7 +3,6 @@ class Ship {
     this.name = name
     this.length = length
     this.damage = 0
-    this.isSunk = false
   }
 
   hit() {
@@ -21,6 +20,19 @@ const destroyer = new Ship('Destroyer', 3)
 const submarine = new Ship('Submarine', 3)
 const patrolBoat = new Ship('Patrol-boat', 2)
 
+const myCarrier = new Ship('Carrier', 5)
+const myBattleship = new Ship('Battleship', 4)
+const myDestroyer = new Ship('Destroyer', 3)
+const mySubmarine = new Ship('Submarine', 3)
+const myPatrolBoat = new Ship('Patrol-boat', 2)
+
 export const ships = [carrier, battleship, destroyer, submarine, patrolBoat]
+export const myShips = [
+  myCarrier,
+  myBattleship,
+  myDestroyer,
+  mySubmarine,
+  myPatrolBoat,
+]
 
 export default Ship

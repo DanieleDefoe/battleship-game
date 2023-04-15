@@ -13,7 +13,7 @@ const createHeroPopup = (() => {
   const user = playgroundGrid('user-preview')
 
   const popup = document.createElement('section')
-  popup.className = 'popup'
+  popup.className = 'popup hero-popup'
 
   let shipIndex = 0
 
