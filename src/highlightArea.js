@@ -6,7 +6,10 @@ const highlightArea = (event, shipLength, isHorizontal) => {
   const pos = event.target.id
   const position = parseInt(pos, 10)
   if ((position + shipLength - 1) % 10 < shipLength - 1 && isHorizontal) return
-  if ((position + shipLength * 10) % 100 < shipLength * 10 && !isHorizontal)
+  if (
+    (position + shipLength * 10 - 10) % 100 < shipLength * 10 - 10 &&
+    !isHorizontal
+  )
     return
 
   for (

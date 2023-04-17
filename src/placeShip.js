@@ -8,7 +8,10 @@ const placeShip = (event, ships, shipIndex) => {
     const position = parseInt(pos, 10)
     if ((position + length - 1) % 10 < length - 1 && window.isHorizontal)
       return false
-    if ((position + length * 10) % 100 < length * 10 && !window.isHorizontal)
+    if (
+      (position + length * 10 - 10) % 100 < length * 10 - 10 &&
+      !window.isHorizontal
+    )
       return false
     for (
       let i = position, j = 0;
